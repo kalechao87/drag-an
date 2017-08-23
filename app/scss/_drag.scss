@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@import "compass/css3";
+/**
+ *
+ * Video Main
+ *
+ */
+$bg: #000;
+$main-blue: #000228;
+// Z-Indexes
+// -------------------------------
+$z-index-placehold:                     -1;
+$z-index-img:                           1;
+$z-index-switch:                        2;
+$z-index-progress:                      9;
+$z-index-tag:                           9;
+$z-index-border:                        10;
+$z-index-notice:                        99;
+$z-index-tooltips:                      99;
+$z-index-head:                          100;
+$z-index-poptips:                       999;
+$z-index-overlay:                       9999;
+/*=====  End of video control类  ======*/
+body {
+  position: relative;
+  overflow: hidden;
+  background: $bg;
+}
+
+/*----------- helper -----------*/
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $bg;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.ab-element {
+  position: absolute;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.hvcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate3d(-50%, -50%, 0));
+}
+
+.hcenter {
+  position: absolute;
+  left: 50%;
+  @include transform(translate3d(-50%, 0, 0));
+}
+
+.vcenter {
+  position: absolute;
+  top: 50%;
+  @include transform(translate3d(0, -50%, 0));
+}
+
+#music-control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  margin: 24px;
+  z-index: $z-index-head;
+}
+
+#music-control-main {
+  position: absolute;
+  $music-bg: '../images/music-bg.png';
+  width: image-width($music-bg);
+  height: image-height($music-bg); 
+  background-image: url($music-bg);
+}
+
+.music-control-icon {
+  position: absolute;
+  $music-icon: '../images/music-icon.png';
+  width: image-width($music-icon);
+  height: image-height($music-icon); 
+  background-image: url($music-icon);
+  top: 50%;
+  left: 50%;
+  @include transform(translate3d(-50%, -50%, 0));
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform-origin: 0% 0%;
+}
+
+#minisite {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1138px;
+  height: 640px;
+  margin: {
+    top: -320px;
+    left: -569px;
+  }
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  background-color: #ff0000;
+}
+
+#log {
+  position: absolute;
+  left:120px;
+  top:120px;
+  width:100%;
+  // height: 330px;
+  // background-color: #fff;
+  color:#fff;
+  z-index: 999;
+  // display: none;
+}
