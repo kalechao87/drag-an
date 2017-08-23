@@ -147,6 +147,11 @@ body {
   overflow: hidden;
 }
 
+#main-scene {
+  // overflow-x: scroll;
+  // -webkit-overflow-scrolling: touch;
+}
+
 $sceneLen: 10;
 
 .scene-wrapper {

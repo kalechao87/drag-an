@@ -120,3 +120,25 @@ function updateSceneScroll() {
   $("#main-scene").scrollLeft(dragDis);
 }
 
+// init controller
+var MController = new ScrollMagic.Controller({
+  container: '#main-scene',
+  vertical: false,
+});
+
+var scene1AN = new TimelineMax({
+  // paused: true
+});
+scene1AN.fromTo('#scene1-ball', 2, {x: 0, y: 0}, {x: 300, y: 400})
+.to('#scene1-ball', 2, {x: 600, y: 0});
+
+var scene1 = new ScrollMagic.Scene({
+  triggerElement: '#scene1',
+  triggerHook: 'onLeave',
+  offset: 75,
+  duration: 300
+})
+.setTween(scene1AN)
+.addIndicators()
+.addTo(MController);
+
