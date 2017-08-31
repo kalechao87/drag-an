@@ -61,7 +61,7 @@ gulp.task('compass', function() {
           'not ie <= 11'
         ]
     }))
-    .pipe(cssnano())
+    // .pipe(cssnano())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({  // Reloading with Browser Sync
